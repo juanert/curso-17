@@ -1,0 +1,24 @@
+/*Selector universal*/
+* {
+  color:brown
+}
+
+p {
+  /*
+  background-color: cornflowerblue;
+  background-color: rgb(25, 65, 208);
+  background-color: #21a04b;
+  background-color: hsl(0, 100%, 50%);
+  background-color: rgba(100, 148, 237, 0.79);
+  */
+  background-color: #155adba3;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+body{
+  background-image: url("https://www.elsoldetijuana.com.mx/incoming/7h4hk6-kesikesiperrito.jpg/alternates/LANDSCAPE_768/Kesikesiperrito.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*background-position: center*/;
+}
