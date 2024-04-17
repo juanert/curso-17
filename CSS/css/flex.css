@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .fila{
   display: flex;
   /*Eje primario*/
@@ -6,3 +11,28 @@
   align-items: center;
   gap: 20px;
 }
+
+.columna{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+/*
+  Realizar en HTML y CSS la sección principal de la página
+  de Netflix, esta actividad puede ser llavada acabo de forma
+  grupal o de forma individual. El resultado debe ser lo más parecido
+  a la sección de netflix real
+
+  Crear un repositorio para trabajar en el proyecto, este ropositorio
+  debe contener una descripción detallada que hable un poco sobre
+  el proyecto, las personas quienes trabajaron, y el proposito del proyecto
+  (El cual es aprender HTML y CSS). Además, todos los que trabajen
+  en el proyecto deben de estar como colaboradores en el repositorio
+
+  Además el proyecto debe estar subido a GitHub Pages
+
+  Fecha de entrega: 18/04/24
+*/
