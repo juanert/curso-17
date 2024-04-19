@@ -1,0 +1,29 @@
+
+
+.fijo {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+}body {
+  height: 5000px;
+}
+
+div {
+  background-color: blue;
+}
+
+.relativo {
+  position: relative;
+  top: 50px;
+}
+
+.absoluto {
+  position: absolute;
+  top: 80px;
+  right: 0;
+}

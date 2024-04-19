@@ -1,0 +1,38 @@
+:root{
+  --main-color-text: white
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  /*Horizontal*/
+  justify-items: center;
+  /*Vertical*/
+  align-content: center;
+}
+
+section div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: background-color 5s, color 2s;
+}
+
+section div:hover {
+  background-color: darkblue;
+  color: var(--main-color-text);
+}
+
+.info {
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+}
+
+.izquierda{
+  grid-column: span 4;
+}
+
+.derecha{
+  grid-column: span 8;
+}
