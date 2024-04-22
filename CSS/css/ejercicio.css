@@ -1,0 +1,26 @@
+section {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+section div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (min-width: 768px) {
+  section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  section div{
+    align-items: baseline;
+  }
+}
+
+/*
+  Realizar una copia de Youtube con responsive
+  (Fecha de entrega> 30/04/24)
+*/
