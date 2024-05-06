@@ -1,0 +1,16 @@
+/* Variables */
+/* Mixins
+ * Un bloque de codigo reutilizable */
+p {
+  color: red;
+}
+
+div {
+  background-color: red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+div h1 {
+  color: blue;
+}/*# sourceMappingURL=styles.css.map */

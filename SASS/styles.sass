@@ -1,0 +1,21 @@
+/*
+  Variables
+$main-color: red
+
+/*
+  Mixins
+  Un bloque de codigo reutilizable
+
+@mixin flex($display, $justify, $align)
+  display: $display
+  justify-content: $justify
+  align-items: $align
+
+p
+  color: $main-color
+
+div
+  background-color: red
+  @include flex(flex,space-between,center)
+  h1
+    color: blue
