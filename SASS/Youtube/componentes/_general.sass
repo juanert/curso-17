@@ -1,0 +1,24 @@
+$background-color: #0F0F0F
+$text-color: white
+
+@mixin displays($display:flex,$justify:center,$align:center,$direction:row,$column_numbers:1fr)
+  @if $display == flex
+    display: $display
+    flex-direction: $direction
+    justify-content: $justify
+    align-items: $align
+  @else if $display == grid
+    display: $display
+    justify-items: $justify
+    align-content: $align
+    grid-template-columns: $column_numbers
+
+*
+  margin: 0
+  padding: 0
+
+body
+  background-color: $background-color
+
+
+

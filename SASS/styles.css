@@ -1,16 +1,21 @@
+/* @use "./componentes/_utilidades" as * */
 /* Variables */
 /* Mixins
  * Un bloque de codigo reutilizable */
 p {
-  color: red;
+  color: yellow;
 }
 
 div {
-  background-color: red;
+  background-color: yellow;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 div h1 {
-  color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: black;
 }/*# sourceMappingURL=styles.css.map */

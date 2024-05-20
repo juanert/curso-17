@@ -1,0 +1,43 @@
+nav
+  @include displays(flex,space-between,center,row)
+  padding: 12px 18px
+
+nav>div
+  @include displays()
+  gap: 8px
+
+i
+  width: 35px
+  color: $text-color
+
+#yt-logo-updated-svg_yt1
+  width: 120px
+
+.button-responsive
+  display: block
+
+.busqueda
+  display: none
+
+.profile-photo
+  width: 30px
+  border-radius: 100%
+
+@media only screen and (min-width: 768px)
+  .button-responsive
+    display: none
+
+  .busqueda
+    display: flex
+
+/*
+  Proyecto SASS
+  Realizar una reinterpretación de la página principal de claro o movistar
+  Debe tener la inteción de realmente informarte y vender sus productos o servicios
+  La cantidad de secciones lo decidira el estudiante, pero el sitio web debe ser
+  responsibe. Puedes utilizar tipografias o colores distintos a lo de la marca si
+  lo deseas (reinterpretar la marca)
+
+  Este proyecto debe utilizar mixings, componentes, variables, condicionales
+
+  Fecha de entrega: 16/05/24
