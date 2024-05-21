@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./animacion.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="animation-bg rounded-b-[12px] z-10 flex sticky top-0 bg-blue-600 text-white items-center justify-between px-8 py-4 text-lg">
+      <div>
+        <a href="./index.html">
+          <img class="w-[140px]" src="./Lexpin_Logo blanco.png" alt="">
+        </a>
+      </div>
+      <div class="hidden lg:flex gap-4 items-center font-light">
+        <p class="cursor-pointer hover:font-semibold transition-all ease-in duration-300">Inicio</p>
+        <p class="cursor-pointer hover:font-semibold transition-all ease-in duration-300">Cursos</p>
+        <button class="cursor-pointer font-semibold bg-blue-500 outline-1 outline outline-white rounded-[35px] px-4 py-2 hover:bg-white hover:text-blue-500 hover:to-blue-500 transition-all ease-in duration-300 w-[120px]">
+          Acceder
+        </button>
+      </div>
+      <div class="flex lg:hidden">
+        <button>
+          X
+        </button>
+      </div>
+    </nav>
+    <main class="p-8">
+      <section class="grid grid-cols-1 md:grid-cols-2 animation-bg drop-shadow-md gap-8 bg-gradient-to-br from-sky-600 via-blue-400 to-sky-600 rounded-[40px] p-12">
+        <div class="flex z-10 flex-col justify-center items-center text-center md:text-left md:items-baseline gap-8 text-white">
+          <div class="flex flex-col gap-1">
+            <h1 class="text-4xl font-bold">Formate en el</h1>
+            <h1 class="text-4xl font-bold">mundo digital</h1>
+          </div>
+          <img class="w-[80%] flex md:hidden" src="./online.png" alt="">
+          <p class="font-light text-lg">Comienza en las carreras de programación web, diseño gráfico o marketing</p>
+          <button class="cursor-pointer bg-blue-500 outline-1 outline outline-white rounded-[35px] px-4 py-2 hover:bg-white hover:text-blue-500 hover:to-blue-500 transition-all ease-in duration-300 md:w-[150px] w-[300px] text-white font-semibold text-xl">
+            Comenzar
+          </button>
+        </div>
+        <div class="hidden z-10 md:flex flex-col items-center justify-center">
+          <img class="w-[100%]" src="./online.png" alt="">
+        </div>
+        <div class="absolute w-full h-full bg-white/10 blur-3xl backdrop-blur-3xl rounded-[35px]">
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
