@@ -213,3 +213,68 @@ console.log("hola".endsWith("ola"));
   1) Crea una función que reciba una palabra y la imprima al revés (Letra por letra)
   Opcional: Verificar si la palabra es un palíndromo
 */
+
+let palabra = 'Oso';
+
+function invertir_palabra(palabra, contador = 1, palabra_invertida = ''){
+  if(contador <= palabra.length){
+    console.log(palabra.charAt(palabra.length - contador));
+    palabra_invertida += palabra.charAt(palabra.length - contador);
+    console.log('Palabra invertida:' + palabra_invertida);
+    if(palabra.toLowerCase() == palabra_invertida.toLowerCase()){
+      console.log('Es un palindromo');
+    }
+    contador++;
+    invertir_palabra(palabra, contador, palabra_invertida);
+  }
+}
+
+invertir_palabra(palabra);
+
+/*
+  Arrays y los metodos de array
+  Los arrays son listas de elementos y en JavaScript tienen varios métodos
+*/
+
+let frutas = ['Manzana','Pera','Uva','Sandia'];
+// Longitud de un array
+console.log(frutas.length);
+// Agregar un elemento al final del array
+frutas.push('Fresa');
+console.log(frutas);
+// Eliminar el ultimo elemento del array
+frutas.pop();
+console.log(frutas);
+// Agregar un elemento al inicio del array
+frutas.unshift('Fresa');
+console.log(frutas);
+// Eliminar el primer elemento del array
+frutas.shift();
+console.log(frutas);
+// Obtener un subarray de un array
+console.log(frutas.slice(1,3));
+// Reemplazar un elemento de un array
+frutas[1] = 'Mango';
+console.log(frutas);
+// Encontrar el indice de un elemento de un array
+console.log(frutas.indexOf('Mango'));
+// Eliminar elementos de un array
+frutas.splice(1,2);
+console.log(frutas);
+// Unir dos arrays
+let frutas2 = ['Pera','Uva'];
+//console.log(frutas.concat(frutas2));
+frutas = frutas.concat(frutas2);
+console.log(frutas);
+// Invertir un array
+console.log(frutas.reverse());
+// Ordenar un array
+console.log(frutas.sort());
+
+/*
+  Ejercicios de arrays
+  1) Crea una función que reciba un array de numeros y los sume
+  2) Crea una función que reciba un array de numeros y devuelva el mayor
+  3) Crea una funcion que reciba dos arrays y compare si son iguales
+*/
+
