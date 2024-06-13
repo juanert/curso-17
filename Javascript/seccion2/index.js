@@ -278,3 +278,175 @@ console.log(frutas.sort());
   3) Crea una funcion que reciba dos arrays y compare si son iguales
 */
 
+//1
+let numeros_array = [1,5,3,2,6];
+
+function sumar_array(numeros, suma = 0, contador = 0){
+  if(contador < numeros.length){
+    suma += numeros[contador]; //suma = suma + numeros[contador]
+    contador++;
+    sumar_array(numeros, suma, contador);
+  } else {
+    console.log(suma);
+  }
+}
+
+sumar_array(numeros_array,1,1);
+
+//2
+function mayor_array(numeros, mayor = 0, contador = 0){
+  if(contador < numeros.length){
+    if(numeros[contador] > mayor){
+      mayor = numeros[contador];
+    }
+    contador++;
+    mayor_array(numeros, mayor, contador);
+  } else {
+    console.log(mayor);
+  }
+}
+
+mayor_array(numeros_array);
+
+/*
+function mayor_sort(numeros){
+  console.log(numeros.sort()[numeros.length - 1]);
+}
+*/
+
+function mayor_sort(numeros){
+  numeros = numeros.sort();
+  console.log(numeros[numeros.length - 1]);
+}
+
+mayor_sort(numeros_array);
+
+//3
+let numeros_array2 = [1,5,3,2,6];
+let numeros_array3 = [1,5,3,2,6];
+
+function comparar_arrays(array1, array2, contador = 0){
+  if(array1.length == array2.length){
+    if (contador < array1.length) {
+      if(array1[contador] == array2[contador]){
+        if(contador == array1.length-1){
+          console.log('Los arrays son iguales');
+        }
+        contador++;
+        comparar_arrays(array1, array2, contador);
+      } else {
+        console.log('Los arrays no son iguales');
+      }
+    }
+  } else {
+    console.log('Los arrays no son iguales');
+  }
+}
+
+comparar_arrays(numeros_array2, numeros_array3);
+
+function comparar_arrays_simple(array1, array2){
+  if(array1.toString() == array2.toString()){
+    console.log('Los arrays son iguales');
+  } else {
+    console.log('Los arrays no son iguales');
+  }
+}
+
+comparar_arrays_simple(numeros_array2, numeros_array3);
+
+/*
+  Objetos
+  Los objetos son colecciones de propiedades y métodos.
+  Propiedades: Son variables dentro del objeto. (Cosas que lo describen)
+  Métodos: Son funciones dentro del objeto. (Cosas que puede hacer)
+*/
+
+let persona = {
+  nombre: 'Juan',
+  edad: 25,
+  saludar: function(mensaje){
+    console.log(`${this.nombre} dice: ${mensaje}`);
+  }
+}
+
+console.log(persona.nombre);
+console.log(persona.edad);
+persona.saludar("Hola mundo");
+persona.saludar("Hey!");
+
+/*
+  Funciones anonimas
+  Las funciones anonimas son funciones sin nombre.
+*/
+
+let sumar_anonimo = function(a,b){
+  return a + b;
+}
+
+console.log(sumar_anonimo(5,5));
+
+// Loops (Ciclos)
+/*
+  Los loops son estructuras de control que nos permiten repetir
+  un bloque de código varias veces.
+*/
+// For
+let videojuegos = ['Mario','Zelda','Metroid','Pokemon'];
+for(let i = 0; i < videojuegos.length; i++){
+  console.log(videojuegos[i]);
+}
+// For of
+/*
+  El for of es una forma más sencilla de recorrer un array
+*/
+let cadena = 'Hola mundo';
+for(let letra of cadena){
+  console.log(letra);
+}
+// For in
+/*
+  El for in es una forma de recorrer un objeto
+*/
+let persona2 = {
+  nombre: 'Juan',
+  edad: 25,
+  sexo: 'Masculino'
+}
+let contador = 0;
+for(let propiedad in persona2){
+  console.log(`${propiedad}: ${persona2[propiedad]}`);
+  contador++;
+  if(contador == 2){
+    break;
+  }
+}
+// While
+let contador2 = 0;
+while(contador2 <= 10){
+  console.log(contador2);
+  contador2+=2;
+}
+
+// Do while
+let contador3 = 0;
+do {
+  console.log(contador3);
+  contador3++;
+} while(contador3 <= 10);
+
+
+/*
+  Ejericios de loops, objetos y arrays
+  1) Crea una función que reciba un objeto e imprima todas sus propiedades y valores
+  pero debe detenerse si encuentra la propiedad 'edad'
+  2) Crea una función que reciba un array de objetos y los imprima
+  3) Dado el siguiente array de objetos
+  let personas = [
+    {nombre: 'Juan', edad: 25, habilidades: ['Programación','Cocina']},
+    {nombre: 'Carlos', edad: 30, habilidades: ['Diseño','Enseñanza']},
+    {nombre: 'Ana', edad: 20, habilidades: ['Diseño','Cocina']}
+  ];
+  Crea una funcion que reciba el array de objetos e imprima cada una de sus nombres,
+  edades y habilidades
+*/
