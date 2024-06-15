@@ -450,3 +450,149 @@ do {
   Crea una funcion que reciba el array de objetos e imprima cada una de sus nombres,
   edades y habilidades
 */
+
+//1
+let persona3 = {
+  nombre: 'Juan',
+  edad: 25,
+  sexo: 'Masculino'
+}
+
+function imprimir_objeto(objeto){
+  for(let propiedad in objeto){
+    if(propiedad == 'edad'){
+      break;
+    }
+    console.log(`${propiedad}: ${objeto[propiedad]}`);
+  }
+}
+
+imprimir_objeto(persona3);
+
+//2
+let personas = [
+  {nombre: 'Juan', edad: 25, sexo: 'Masculino'},
+  {nombre: 'Carlos', edad: 30, sexo: 'Masculino'},
+  {nombre: 'Ana', edad: 20, sexo: 'Femenino'}
+];
+
+function imprimir_personas(personas_lista){
+  for(let persona of personas_lista){
+    for(let propiedad in persona){
+      console.log(`${propiedad}: ${persona[propiedad]}`);
+    }
+  }
+}
+
+imprimir_personas(personas);
+
+//3
+let personas2 = [
+  {nombre: 'Juan', edad: 25, habilidades: ['Programación','Cocina']},
+  {nombre: 'Carlos', edad: 30, habilidades: ['Diseño','Enseñanza']},
+  {nombre: 'Ana', edad: 20, habilidades: ['Diseño','Cocina']}
+];
+
+function imprimir_personas_habilidades(personas_lista){
+  for(let persona of personas_lista){
+    for(let propiedad in persona){
+      if(propiedad == 'habilidades'){
+        console.log(`${propiedad}:`);
+        for(let habilidad of persona[propiedad]){
+          console.log(habilidad);
+        }
+      } else {
+        console.log(`${propiedad}: ${persona[propiedad]}`);
+      }
+    }
+  }
+}
+
+imprimir_personas_habilidades(personas2);
+
+// Programación orientada a objetos
+/*
+  La programación orientada a objetos es un paradigma de programación
+  que se basa en objetos y clases.
+  Clase: Es un molde para crear objetos.
+  Objeto: Es una instancia de una clase.
+*/
+
+class Personaje {
+  constructor(nombre, vida, ataque){
+    this.nombre = nombre;
+    this.vida = vida;
+    this.ataque = ataque;
+  }
+
+  saludar(){
+    console.log(`Hola soy ${this.nombre}`);
+  }
+}
+
+let mario = new Personaje('Mario', 100, 10);
+let luigi = new Personaje('Luigi', 100, 10);
+let bowser = new Personaje('Bowser', 200, 20);
+
+mario.saludar();
+luigi.saludar();
+bowser.saludar();
+
+class Calculadora{
+  sumar(a,b){
+    return a + b;
+  }
+
+  restar(a,b){
+    return a - b;
+  }
+
+  multiplicar(a,b){
+    return a * b;
+  }
+
+  dividir(a,b){
+    return a / b;
+  }
+}
+
+let calculadoravar = new Calculadora();
+calculadoravar.restar(5,3);
+
+// Console
+/*
+  El objeto console nos permite imprimir mensajes en la consola del navegador
+*/
+
+console.log('Hola mundo');
+console.error('Error');
+console.warn('Advertencia');
+console.clear();
+
+/*
+  Proyectos de la sección
+  1) Utiliza programación orientada a objetos para crear un juego de peleas
+  donde existan dos personajes y se peleen entre ellos hasta que uno de los dos
+  se quede sin vida (por turnos).
+  
+  un personaje tiene nombre, vida y ataque, defensa
+  
+  Cada turno se debe imprimir el daño que se le hace al personaje y la vida que le queda
+  a cada uno. Al final se debe imprimir el ganador.
+
+  Los personajes deben tener un metodo que les permita atacar a otro personaje
+  y un metodo que les permita defenderse.
+
+  Deben ejecutar uno de los dos metodos de forma aleatoria.
+  Y quien ataca o defiende primero debe ser aleatorio.
+
+  La defensa lo que hace es sumar +3 de vida al personaje que se defiende
+
+  el ataque debe ser debe tener un porcentaje aleatorio de quitar el 100% del ataque
+  del personaje que ataca
+
+  2) Crea un programa que te permita jugar piedra, papel o tijera contra la computadora
+  en programación orientada a objetos, guardar un historial de victorias y derrotas
+
+  Fecha de entrega: 20/06/2024
+*/
