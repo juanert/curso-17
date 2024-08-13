@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import NavBar from "./components/shared/NavBar";
 import Products from "./pages/Products";
+import TicTacToe from "./pages/TicTacToe";
 
 /*
   Crear un componente "Lista" que reciba un array de strings llamado
@@ -32,6 +33,7 @@ createRoot(document.getElementById("root")).render(
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/productos" element={<Products />} />
+        <Route path="/tictactoe" element={<TicTacToe />} />
         <Route path="*" element={"404"} />
       </Routes>
     </BrowserRouter>
