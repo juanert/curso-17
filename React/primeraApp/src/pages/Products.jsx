@@ -38,11 +38,15 @@ export default function Products() {
     const emailRegex = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+$/;
     //Mensaje solo acepta letras, numeros, signos de puntuacion y espacios
     const mensajeRegex = /^[a-zA-Z0-9,.¡!¿? ]+$/;
-    if (!nombreRegex.test(nombre.current.value)) {
+    //validar nombre
+    if (
+      !nombreRegex.test(nombre.current.value) &&
+      nombre.current.value !== ""
+    ) {
       setError({
         ...error,
         nombre: {
-          mensaje: "El nombre solo debe de contener letras y espacios",
+          mensaje: "Nombre solo acepta letras y espacios",
           error: true,
         },
       });
@@ -55,10 +59,14 @@ export default function Products() {
         },
       });
     }
-    if (!emailRegex.test(email.current.value)) {
+    //validar email
+    if (!emailRegex.test(email.current.value) && email.current.value !== "") {
       setError({
         ...error,
-        email: { mensaje: "Email no valido", error: true },
+        email: {
+          mensaje: "Email no valido",
+          error: true,
+        },
       });
     } else {
       setError({
@@ -69,12 +77,15 @@ export default function Products() {
         },
       });
     }
-    if (!mensajeRegex.test(mensaje.current.value)) {
+    //validar mensaje
+    if (
+      !mensajeRegex.test(mensaje.current.value) &&
+      mensaje.current.value !== ""
+    ) {
       setError({
         ...error,
         mensaje: {
-          mensaje:
-            "El mensaje solo debe de contener letras, numeros, signos de puntuacion y espacios",
+          mensaje: "Mensaje solo acepta letras, numeros y signos de puntuacion",
           error: true,
         },
       });
@@ -87,6 +98,7 @@ export default function Products() {
         },
       });
     }
+    console.log(error);
   };
 
   useEffect(() => {
