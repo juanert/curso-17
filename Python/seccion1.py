@@ -1,4 +1,6 @@
 import re
+import modulos
+import os
 
 #Esto es un comentario de una linea
 """
@@ -86,3 +88,46 @@ patron = "[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+"
 resultado = re.search(patron, email)
 if resultado:
   print("Email valido")
+
+#try except
+try:
+  resultado = 4 / 0
+except ZeroDivisionError:
+  print("No se puede dividir por cero")
+except:
+  print("Error")
+
+print(modulos.hola)
+
+#fstrings
+nombre = "Juan"
+edad = 25
+print(f"Hola, mi nombre es {nombre} y tengo {edad} años")
+
+#Particularidades de Python
+nombre = "Juan"
+edad = 25
+
+print(nombre + " " + str(edad)) #Error
+
+#archivos
+archivo = open("archivo.txt", "w")
+archivo.write("Hola")
+archivo.close()
+
+archivo = open("archivo.txt", "r")
+contenido = archivo.read()
+print(contenido)
+archivo.close()
+
+#agregar contenido
+archivo = open("archivo.txt", "a")
+archivo.write(" Mundo")
+archivo.close()
+
+#Eliminar archivo
+try:
+  os.remove("archivo.txt")
+except:
+  print("Error al eliminar archivo")
+
