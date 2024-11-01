@@ -107,6 +107,9 @@ export const searchProduct = async (req, res) => {
 
 export const createProduct = async (req, res) => {
   try {
+    if(req.file) {
+      req.body.image = `http://localhost:3001/public/images/${req.file.filename}`;
+    }
     const product = new Product(req.body);
     await product.save();
     res.status(201).json("Product created");
@@ -132,6 +135,13 @@ export const createProduct = async (req, res) => {
 
 export const updateProduct = async (req, res) => {
   try {
+    if(req.file) {
+      req.body.image = `http://localhost:3001/public/images/${req.file.filename}`;
+    }
+    const product_image = await Product.findById(req.params.id);
+    if(req.body.image === null && product_image.image) {
+      req.body.image = product_image.image;
+    }
     const product = await Product.findByIdAndUpdate(req.params.id, req.body);
     if (product) {
       res.status(200).json("Product updated");
